@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private double numberOne = 0.0;
     private double numberTwo = 0.0;
     private TextView resultTV;
-    String operator = "";
+    private String operator = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
