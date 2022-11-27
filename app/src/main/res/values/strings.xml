@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Exercise_4</string>
+    <string name="txt_result">0</string>
+    <string name="txt_function_ac">AC</string>
+    <string name="txt_function_plus_minus">+/-</string>
+    <string name="txt_function_percentage">%</string>
+    <string name="txt_operation_divition">/</string>
+    <string name="txt_operation_multiplication">*</string>
+    <string name="txt_operation_substraction">-</string>
+    <string name="txt_operation_addition">+</string>
+    <string name="txt_operation_equal">=</string>
+    <string name="txt_number_zero">0</string>
+    <string name="txt_number_one">1</string>
+    <string name="txt_number_two">2</string>
+    <string name="txt_number_three">3</string>
+    <string name="txt_number_four">4</string>
+    <string name="txt_number_five">5</string>
+    <string name="txt_number_six">6</string>
+    <string name="txt_number_seven">7</string>
+    <string name="txt_number_eight">8</string>
+    <string name="txt_number_nine">9</string>
+    <string name="txt_number_decimal">.</string>
 </resources>

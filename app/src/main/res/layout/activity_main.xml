@@ -1,18 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    android:id="@+id/relHomeContainer"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:textAlignment="textEnd"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/txt_result"
+        android:textSize="25sp"
+        android:id="@+id/txtResult"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtResult"
+        android:id="@+id/relLayoutRowOne"
+        android:layout_marginTop="25dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAC"
+            android:text="@string/txt_function_ac"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:onClick="doClear"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPlusMinus"
+            android:text="@string/txt_function_plus_minus"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnAC"
+            android:layout_marginLeft="10dp"
+            android:onClick="doNegativePositive"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPercentage"
+            android:text="@string/txt_function_percentage"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnPlusMinus"
+            android:layout_marginLeft="10dp"
+            android:onClick="doModulus"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDivider"
+            android:text="@string/txt_operation_divition"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnPercentage"
+            android:layout_marginLeft="10dp"
+            android:onClick="doDivision"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayoutRowOne"
+        android:id="@+id/relLayoutRowTwo"
+        android:layout_marginTop="25dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSeven"
+            android:text="@string/txt_number_seven"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:onClick="sevenPressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEight"
+            android:text="@string/txt_number_eight"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnSeven"
+            android:layout_marginLeft="10dp"
+            android:onClick="eightPressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNine"
+            android:text="@string/txt_number_nine"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnEight"
+            android:layout_marginLeft="10dp"
+            android:onClick="ninePressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMultiplyer"
+            android:text="@string/txt_operation_multiplication"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnNine"
+            android:layout_marginLeft="10dp"
+            android:onClick="doMultiplication"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayoutRowTwo"
+        android:id="@+id/relLayoutRowThree"
+        android:layout_marginTop="25dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnFour"
+            android:text="@string/txt_number_four"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:onClick="fourPressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnFive"
+            android:text="@string/txt_number_five"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnFour"
+            android:layout_marginLeft="10dp"
+            android:onClick="fivePressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSix"
+            android:text="@string/txt_number_six"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnFive"
+            android:layout_marginLeft="10dp"
+            android:onClick="sixPressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSubstract"
+            android:text="@string/txt_operation_substraction"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnSix"
+            android:layout_marginLeft="10dp"
+            android:onClick="doSubtraction"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayoutRowThree"
+        android:id="@+id/relLayoutRowFour"
+        android:layout_marginTop="25dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnOne"
+            android:text="@string/txt_number_one"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:onClick="onePressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnTwo"
+            android:text="@string/txt_number_two"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnOne"
+            android:layout_marginLeft="10dp"
+            android:onClick="twoPressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnThree"
+            android:text="@string/txt_number_three"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnTwo"
+            android:layout_marginLeft="10dp"
+            android:onClick="threePressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAdd"
+            android:text="@string/txt_operation_addition"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnThree"
+            android:layout_marginLeft="10dp"
+            android:onClick="doSum"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayoutRowFour"
+        android:id="@+id/relRowFive"
+        android:layout_marginTop="25dp"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnZero"
+            android:text="@string/txt_number_zero"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:onClick="zeroPressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPoint"
+            android:text="@string/txt_number_decimal"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnZero"
+            android:layout_marginLeft="10dp"
+            android:onClick="dotPressed"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEqual"
+            android:text="@string/txt_operation_equal"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/btnPoint"
+            android:layout_marginLeft="10dp"
+            android:onClick="doEqual"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
